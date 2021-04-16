@@ -1,0 +1,18 @@
+{
+    "name": "中文语言",
+    "welcomeMsg": "欢迎来到Vue + Ts的项目",
+    "setting": {
+        "test1": "测试1",
+        "test2": "测试2",
+        "note1": "完整功能"
+    },
+    "elPagination": {
+        "per": "每页",
+        "unit": "条",
+        "curPage": "当前页: "
+    },
+    "hello": {
+        "test1": "你好，测试1",
+        "test2": "你好，测试2"
+    }
+}
