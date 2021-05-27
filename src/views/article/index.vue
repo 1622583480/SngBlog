@@ -1,11 +1,8 @@
 <template>
-  <router-view></router-view>
+我是文章页面
 </template>
-
 <script lang="ts" setup>
-
-
 </script>
 
-<style>
+<style lang="less" scoped>
 </style>

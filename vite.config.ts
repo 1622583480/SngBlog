@@ -1,13 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
-
+import styleImport from 'vite-plugin-style-import';
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: path.resolve(__dirname, './'),
+
+  root: './',
   server: {
-    // host: '127.0.0.1',
+    host: "::",
     port: 7147,
+    strictPort: true,
+    // proxy: {
+    //   'api': ""
+    // }
   },
   resolve: {
     alias: {
@@ -15,5 +20,24 @@ export default defineConfig({
       'views': path.resolve(__dirname, 'src/views')
     }
   },
-  plugins: [vue()]
+  css: {
+    postcss: {
+    },
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    }
+  },
+  plugins: [vue(), styleImport({
+    libs: [
+      {
+        libraryName: 'vant',
+        esModule: true,
+        resolveStyle: (name) => {
+          return `vant/es/${name}/style`
+        }
+      },
+    ],
+  }),]
 })

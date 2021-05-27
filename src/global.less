@@ -6,7 +6,68 @@
     outline: none;
     text-decoration: none;
 }
+@font-face {
+    font-family: Open-Font;
+    src: url('./assets/font/JetBrainsMono-Bold.woff2');
+}
+@font-face {
+    font-family: china-Font;
+    src: url('./assets/font/JetBrainsMono-Bold.woff2');
+}
 html,body,#app{
     width: 100vw;
     height: 100vh;
+    font-family: Open-Font;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    // font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.flex{
+    display: flex;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconfont {
+    font-size:30px !important;
+
+}
+.columns-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grow-1{
+    flex-grow: 1;
+}
+.end{
+    display: flex;
+    justify-content: flex-end;
+}
+img{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+a{
+    color: #212121;
+    &:active{
+        color: #212121;
+    }
 }
